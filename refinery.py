@@ -4,6 +4,7 @@ import re
 import os
 import sqlite3
 import tkinter as tk
+from tkinter import messagebox
 from tkinter import filedialog
 from datetime import datetime
 
@@ -97,6 +98,8 @@ def run_refinery():
         json.dump(refined_json_list, f, indent=4, ensure_ascii=False)
 
     print(f"\nSuccess! High-Fidelity Data stored in: {folder}")
+    messagebox.showinfo("Success", "Process finished! CLean Json and db files have been created.")
 
 if __name__ == "__main__":
     run_refinery()
+
